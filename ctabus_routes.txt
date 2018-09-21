@@ -1,0 +1,26 @@
+// from http://dabeaz.com/datadeepdive/cta.py
+
+>>> from read_data import read_data
+>>> fname = '/Users/arulfrancis/data/ctabus.csv'
+>>> records = read_data(fname)
+>>> len(records)
+736461
+>>> records[0]
+Row(route='3', date='01/01/2001', daytype='U', rides=7354)
+>>> # how many routes exist
+... routes = set()
+>>> for row in records:
+...     routes.add(row.route)
+... 
+>>> print(len(routes), 'routes')
+185 routes
+>>> import itertools
+>>> import random
+>>> for i, val in enumerate(random.sample(routes, 5)): print(val)
+... 
+201
+62H
+65
+173
+28
+>>> 
