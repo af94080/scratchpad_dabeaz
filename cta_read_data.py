@@ -1,6 +1,6 @@
 def read_data(filename):
 	from collections import namedtuple
-	Row = namedtuple(Row, ['route', 'date', 'daytype', 'rides'])
+	Row = namedtuple('Row', ['route', 'date', 'daytype', 'rides'])
 	import csv
 
 	records = []
